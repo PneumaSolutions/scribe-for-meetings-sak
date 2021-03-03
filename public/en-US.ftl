@@ -578,3 +578,19 @@ letter-event-attendee =
 
         Respectfully,  
         { $senderName }
+
+## User interface
+
+customize-letter-heading = Customize your letter
+customize-letter-instructions = Please fill out the fields below to customize your letter. To protect your privacy, none of the information you enter here will be sent back to Pneuma Solutions.
+
+select-unset-option = Please choose
+
+sample-letter-heading = Sample letter
+sample-letter-instructions = Now you can choose a sample subject line, copy it to the clipboard, paste it into your email app, then copy the body of the latter of the clipboard and paste that into your email app. Feel free to edit the letter to reflect your personal style.
+
+latel-subject = Subject
+copy-subject-button = Copy subject to clipboard
+copy-body-button = Copy body of letter to clipboard
+
+try-another-letter = Not what you were looking for? Try another letter.

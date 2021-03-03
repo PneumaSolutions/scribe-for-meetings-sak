@@ -1,7 +1,22 @@
 {
-    "compilerOptions": {
-        "esModuleInterop": true,
-        "strict": true,
-        "jsx": "react",
+  "compilerOptions": {
+    "allowJs": true,
+    "module": "commonjs",
+    "lib": ["es2015", "dom"],
+    "esModuleInterop": true,
+    "strict": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "jsx": "react",
+    "downlevelIteration": true,
+    "paths": {
+      "*": ["node_modules/*"]
     }
+  },
+  "include": [
+    "src/**/*"
+  ]
 }
