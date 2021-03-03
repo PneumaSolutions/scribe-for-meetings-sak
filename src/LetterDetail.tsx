@@ -125,6 +125,25 @@ export function LetterDetail({ letterId }: LetterDetailProps) {
     subjectOptions.push(<option value={`${i}`}>{bundle.formatPattern(subjectPatterns[i], substitutions)}</option>)
   }
 
+  const copySubject = async () => {
+    const subject = bundle.formatPattern(subjectPatterns[subjectPatternIndex], substitutions)
+    await navigator.clipboard.writeText(subject)
+    window.alert(l10n.getString("copied", null, "Copied to clipboard"))
+  }
+
+  const copyBody = async () => {
+    const bodyHtml = (document.querySelector("#letter-body") as HTMLElement).innerHTML
+    const bodyMarkdownBlob = new Blob([bodyMarkdown], {type: "text/plain"})
+    const bodyHtmlBlob = new Blob([bodyHtml], {type: "text/html"})
+    const bodyClipboardItem = new (window as any).ClipboardItem({"text/html": bodyHtmlBlob, "text/plain": bodyMarkdownBlob})
+    try {
+      await (navigator.clipboard as any).write([bodyClipboardItem])
+    } catch (e) {
+      await navigator.clipboard.writeText(bodyMarkdown)
+    }
+    window.alert(l10n.getString("copied", null, "Copied to clipboard"))
+  }
+
   return (
     <>
       <h1>{bundle.formatPattern(letter.attributes.name)}</h1>
@@ -169,7 +188,14 @@ export function LetterDetail({ letterId }: LetterDetailProps) {
         </select>
       </div>
 
-      <ReactMarkdown>{bodyMarkdown}</ReactMarkdown>
+      <div>
+        <button type="button" className="btn btn-primary" onClick={copySubject}><Localized id="copy-subject-button">Copy subject</Localized></button>
+        <button type="button" className="btn btn-primary" onClick={copyBody}><Localized id="copy-body-button">Copy body</Localized></button>
+      </div>
+
+      <div id="letter-body">
+        <ReactMarkdown>{bodyMarkdown}</ReactMarkdown>
+      </div>
 
       <p><a href="./"><Localized id="try-another-letter">Try another letter</Localized></a></p>
     </>

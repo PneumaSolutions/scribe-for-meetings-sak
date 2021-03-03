@@ -594,3 +594,5 @@ copy-subject-button = Copy subject to clipboard
 copy-body-button = Copy body of letter to clipboard
 
 try-another-letter = Not what you were looking for? Try another letter.
+
+copied = Copied to clipboard
