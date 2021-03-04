@@ -587,7 +587,7 @@ customize-letter-instructions = Please fill out the fields below to customize yo
 select-unset-option = Please choose
 
 sample-letter-heading = Sample letter
-sample-letter-instructions = Now you can choose a sample subject line, copy it to the clipboard, paste it into your email app, then copy the body of the latter of the clipboard and paste that into your email app. Feel free to edit the letter to reflect your personal style.
+sample-letter-instructions = Now you can choose a sample subject line, copy it to the clipboard, paste it into your email app, then copy the body of the letter of the clipboard and paste that into your email app. Feel free to edit the letter to reflect your personal style.
 
 latel-subject = Subject
 copy-subject-button = Copy subject to clipboard
@@ -597,4 +597,27 @@ try-another-letter = Not what you were looking for? Try another letter.
 
 copied = Copied to clipboard
 
-choose-letter-heading = Choose a letter
+intro =
+    # Scribe for Meetings Self-Advocacy Kit
+
+    Scribe for Meetings is the first service to allow online webinar and meeting presenters to share accessible slide content with print disabled participants.
+
+    If you want more information, [click here for our Scribe for Meetings page.](https://pneumasolutions.com/products/scribe-for-meetings/)
+
+    ## Sometimes, self-advocacy is the answer.
+
+    When it comes to accessibility, those who are in need of it for themselves, or on behalf of another, aren't strangers to jumping in with self-advocacy to achieve it.
+
+    We understand, and we're here to help. Especially when it comes to accessible screen shares on Zoom.
+
+    ## How are we helping you advocate for Scribe for Meetings?
+
+    We've assembled a Self-Advocacy Kit (SAK). A packet of e-mail formatted letters you can send to appropriate individuals on behalf of yourself, a child, or an employee.
+
+    ## Accessibility isn't a favor, it's a right to inclusivity.
+
+    There are obviously many different situations where you may need a presenter to provide Scribe for Meetings, but we've given you a broad range of letters to choose from.
+
+    The below Scribe for Meetings SAK letters are ready to customize and send. Just pick the letter that fits your situation, fill in a few simple fields, copy and paste into your email app, and edit the letter as you see fit. Then send it to the desired individual in charge of hosting the meeting or webinar.
+
+    We've also optimized a range of subject lines for each letter. This will help get your e-mail opened. Of course, you're also free to ignore our suggested subject lines and write your own.
