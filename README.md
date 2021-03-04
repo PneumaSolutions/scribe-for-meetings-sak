@@ -1,27 +1,24 @@
-# @fluent/react Example
+# Scribe for Meetings Self-Advocacy Kit
 
-This tiny React app demonstrates how `@fluent/react` can integrate with React.
+Scribe for Meetings is the first service to allow online webinar and meeting presenters to share accessible slide content with print disabled participants.
 
-## Running
+If you want more information, [click here for our Scribe for Meetings page.](https://pneumasolutions.com/products/scribe-for-meetings/)
 
-The example app requires a local build of `@fluent/react`. In the root of
-your `fluent.js` clone install the build tools:
+The Self-Advocacy Kit (SAK) is a set of pre-written letters to help people advocate for Scribe for Meetings. The official instance of the web application is at <https://sak.scribeformeetings.com/>.
 
-    cd fluent.js/
-    npm install
+## How it works
 
-Then build and package `@fluent/react`:
+The SAK application is a client-side JavaScript application using React. It uses Mozilla's [Fluent](https://www.projectfluent.org/) project both to make the user interface localizable and to provide a declarative format for the customizable letters. The second use of Fluent is admittedly a bit unusual, but we hope it will ease the maintenance of the SAK. Basically, each SAK letter is a single Fluent message with several attributes. At run time, we traverse the subject and body attributes to find the user-customizable fields, then look up labels for those fields both globally and within the message attributes. There are already 10 letters, of varying complexity, so looking at those should clarify how this works.
 
-    cd fluent.js/fluent-react/
-    npm install
-    make
-    npm pack
-    mv fluent-react-*.tgz example/fluent-react.tgz
+## Running locally
 
-Finally, change back to this directory, and build the example:
+Assuming you have a reasonably recent version of Node.js installed, just run these commands in the root of your checkout:
 
-    cd fluent.js/fluent-react/example/
-    npm install
-    npm start
+```
+npm install
+npm start
+```
 
-Open http://localhost:1234 to see the example running.
+The app will then be available at http://localhost:1234/
+
+Note that the "copy to clipboard" functionality only works if you're accessing the app over SSL or on localhost.
