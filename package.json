@@ -11,6 +11,7 @@
     "@fluent/bundle": "^0.16.0",
     "@fluent/langneg": "0.4.x",
     "@fluent/react": "0.13.x",
+    "bootstrap": "^4.6.0",
     "react": "16.8.x",
     "react-dom": "16.8.x",
     "react-markdown": "^5.0.3"

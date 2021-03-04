@@ -155,22 +155,22 @@ export function LetterDetail({ letterId }: LetterDetailProps) {
       {fields.map(({ name, label, value, setValue }) => {
         return (
           <>
-            <div>
-              <label htmlFor={name}>
+            <div className="form-group row">
+              <label className="col-form-label text-sm-right col-sm-2" htmlFor={name}>
                 {label}
               </label>
-            </div>
-            <div>
-              {(name === "gender") ? (
-                <select id={name} name={name} value={value} onChange={evt => setValue(evt.target.value)}>
-                  <option value="">{l10n.getString("select-unset-option", null, "Please choose")}</option>
-                  <option value="male">{l10n.getString("gender-option-male", null, "male")}</option>
-                  <option value="female">{l10n.getString("gender-option-female", null, "female")}</option>
-                  <option value="other">{l10n.getString("gender-option-other", null, "other")}</option>
-                </select>
-              ) : (
-                <input id={name} name={name} value={value} onChange={evt => setValue(evt.target.value)} />
-              )}
+              <div className="col-sm-10">
+                {(name === "gender") ? (
+                  <select id={name} name={name} value={value} onChange={evt => setValue(evt.target.value)}>
+                    <option value="">{l10n.getString("select-unset-option", null, "Please choose")}</option>
+                    <option value="male">{l10n.getString("gender-option-male", null, "male")}</option>
+                    <option value="female">{l10n.getString("gender-option-female", null, "female")}</option>
+                    <option value="other">{l10n.getString("gender-option-other", null, "other")}</option>
+                  </select>
+                ) : (
+                  <input id={name} name={name} value={value} onChange={evt => setValue(evt.target.value)} />
+                )}
+              </div>
             </div>
           </>
         )
@@ -179,17 +179,20 @@ export function LetterDetail({ letterId }: LetterDetailProps) {
       <h1><Localized id="sample-letter-heading">Sample letter</Localized></h1>
       <p><Localized id="sample-letter-instructions" /></p>
 
-      <div>
-        <label htmlFor="subject"><Localized id="label-subject">Subject</Localized></label>
-      </div>
-      <div>
-        <select id="subject" name="subject" value={`${subjectPatternIndex}`} onChange={evt => setSubjectPatternIndex(parseInt(evt.target.value))}>
-          {subjectOptions}
-        </select>
+      <div className="form-group row">
+        <label className="col-form-label text-sm-right col-sm-2" htmlFor="subject">
+          <Localized id="label-subject">Subject</Localized>
+        </label>
+        <div className="col-sm-10">
+          <select id="subject" name="subject" value={`${subjectPatternIndex}`} onChange={evt => setSubjectPatternIndex(parseInt(evt.target.value))}>
+            {subjectOptions}
+          </select>
+          {" "}
+          <button type="button" className="btn btn-secondary" onClick={copySubject}><Localized id="copy-subject-button">Copy subject</Localized></button>
+        </div>
       </div>
 
       <div>
-        <button type="button" className="btn btn-primary" onClick={copySubject}><Localized id="copy-subject-button">Copy subject</Localized></button>
         <button type="button" className="btn btn-primary" onClick={copyBody}><Localized id="copy-body-button">Copy body</Localized></button>
       </div>
 
