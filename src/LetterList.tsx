@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { Localized, useLocalization } from "@fluent/react"
+import ReactMarkdown from "react-markdown"
 
 export function LetterList() {
   const { l10n } = useLocalization()
@@ -16,7 +17,7 @@ export function LetterList() {
 
   return (
     <>
-      <h1><Localized id="choose-letter-heading" /></h1>
+      <ReactMarkdown>{l10n.getString("intro")}</ReactMarkdown>
 
       {letters.map(({ bundle, letterId, letter }) => {
         return (
