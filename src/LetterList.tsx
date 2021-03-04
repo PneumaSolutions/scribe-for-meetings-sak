@@ -16,6 +16,8 @@ export function LetterList() {
 
   return (
     <>
+      <h1><Localized id="choose-letter-heading" /></h1>
+
       {letters.map(({ bundle, letterId, letter }) => {
         return (
           <>
