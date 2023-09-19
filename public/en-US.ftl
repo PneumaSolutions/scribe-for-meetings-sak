@@ -587,7 +587,7 @@ customize-letter-instructions = Please fill out the fields below to customize yo
 select-unset-option = Please choose
 
 sample-letter-heading = Sample letter
-sample-letter-instructions = Now you can choose a sample subject line, copy it to the clipboard, paste it into your email app, then copy the body of the letter of the clipboard and paste that into your email app. Feel free to edit the letter to reflect your personal style.
+sample-letter-instructions = Now you can choose a sample subject line, copy it to the clipboard, paste it into your email app, then copy the body of the letter to the clipboard and paste that into your email app. Feel free to edit the letter to reflect your personal style.
 
 latel-subject = Subject
 copy-subject-button = Copy subject to clipboard
